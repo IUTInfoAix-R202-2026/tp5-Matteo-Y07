@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
@@ -35,7 +34,6 @@ class SitesControllerTest {
     return robot.lookup("#tableSites").queryAs(TableView.class);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_tableau_affiche_les_sites_persistes(FxRobot robot) {
     assertThat(table(robot).getItems())
@@ -43,7 +41,6 @@ class SitesControllerTest {
         .isNotEmpty();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void ajouter_un_site_via_le_formulaire_ajoute_une_ligne(FxRobot robot) {
     int avant = table(robot).getItems().size();
